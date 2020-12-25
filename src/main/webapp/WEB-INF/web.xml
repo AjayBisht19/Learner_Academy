@@ -46,6 +46,18 @@
 		<description></description>
 		<servlet-class>com.servlets.deleteStudentServlet</servlet-class>
 	</servlet>
+	<servlet>
+		<servlet-name>addSubjectAndTeacherServlet</servlet-name>
+		<display-name>addSubjectAndTeacherServlet</display-name>
+		<description></description>
+		<servlet-class>com.servlets.addSubjectAndTeacherServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>deleteSubjectAndTeacherServlet</servlet-name>
+		<display-name>deleteSubjectAndTeacherServlet</display-name>
+		<description></description>
+		<servlet-class>com.servlets.deleteSubjectAndTeacherServlet</servlet-class>
+	</servlet>
   <servlet-mapping>
   	<servlet-name>addSubjectServlet</servlet-name>
   	<url-pattern>/addSubjectServlet</url-pattern>
@@ -73,5 +85,13 @@
   <servlet-mapping>
   	<servlet-name>deleteStudentServlet</servlet-name>
   	<url-pattern>/deleteStudentServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>addSubjectAndTeacherServlet</servlet-name>
+  	<url-pattern>/addSubjectAndTeacherServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>deleteSubjectAndTeacherServlet</servlet-name>
+  	<url-pattern>/deleteSubjectAndTeacherServlet</url-pattern>
   </servlet-mapping>
 </web-app>

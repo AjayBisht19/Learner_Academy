@@ -1,3 +1,6 @@
+<%@page import="com.entities.ClassSubjectAndTeacher"%>
+<%@page import="com.entities.Teachers"%>
+<%@page import="com.entities.Subjects"%>
 <%@page import="com.entities.ClassStudents"%>
 <%@page import="java.util.List"%>
 <%@page import="org.hibernate.Query"%>
@@ -22,9 +25,11 @@
 	<div class="col-md-6 text-center">
 	<br>
 		<h2>Subjects and their teachers</h2>
-		<table class="table mt-3">
+		 <table class="table mt-3">
 		  <thead>
 		    <tr>
+		  
+		     
 		     
 		      <th scope="col">Subject</th>
 		      <th scope="col">Teacher</th>
@@ -33,38 +38,119 @@
 		    </tr>
 		  </thead>
 		  <tbody>
-		    <tr>
-		      <td>Maths</td>
-		      <td>Mr. Vinod</td>
-		      <td><div class="container">
-			<a class="btn btn-outline-danger btn-sm mt-1"> delete</a>
-			</div></td> 
-		    </tr>	   
+		    
+		       
+		      <%
+  			String classs=request.getParameter("classs");
+			Session s3= FactoryProvider.getFactory().openSession();
+			Query q3= s3.createQuery("from ClassSubjectAndTeacher where class_=:x");
+			q3.setParameter("x",classs);
+			List<ClassSubjectAndTeacher> list3=q3.list();
+			for(ClassSubjectAndTeacher cst:list3){
+				%><tr>
+			    <td><%=cst.getSubject() %></td>
+			      <td><%=cst.getTeacher() %></td>
+			      <td><div class="container">
+				<a class="btn btn-outline-danger btn-sm mt-1" href="deleteSubjectAndTeacherServlet?ClassId=<%=cst.getCstId()%>&classs=<%=cst.getClass_()%>"> delete</a>
+				</div>
+				</td> 
+				 </tr>
+				<%
+			}
+			s3.close();
+			%>
+		  
+		   	   
 		    </tbody>
-		</table>	
-		<a class="btn btn-dark">Add</a>
-	</div>
+		</table>	 
+		<!-- Modal -->
+			<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <h5 class="modal-title" id="exampleModalLabel">Add Student</h5>
+			        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			      </div>
+			      <div class="modal-body">
+			        <form action="addSubjectAndTeacherServlet?classs=<%=classs %>" method="POST" >
+			        <h6>Select Subject</h6>
+						<select class="form-select" name="subjectName">
+						<option selected disabled>--Select Subject--</option>
+			        	<%Session s= FactoryProvider.getFactory().openSession();
+							Query q= s.createQuery("from Subjects");
+							List<Subjects> list=q.list();
+							for(Subjects sub:list){
+								 %>
+							 
+								<option value="<%= sub.getSubject() %>"><%= sub.getSubject() %></option>
+										
+						<%}
+						s.close();%>
+							</select>	
+						 
+					  	 <br>
+					  	 <h6>Select Teacher</h6>
+						<select class="form-select" name="teacherName">
+						  <option selected disabled>--Select Teacher--</option>
+						  <%
+		
+							Session s1= FactoryProvider.getFactory().openSession();
+							Query q1= s1.createQuery("from Teachers");
+							List<Teachers> list1=q1.list();
+							for(Teachers t:list1){
+								%>
+						  <option value="<%= t.getTeacher() %>"><%= t.getTeacher() %></option>
+						  <%
+							}
+							s1.close();
+							%>
+						</select>
+						</div>
+						 <div class="modal-footer">
+					  		<button type="submit" class=" mt-3 btn btn-primary">Add</button>
+					  	 </div>
+					</form>
+			      </div>
+			     
+			    </div>
+			  </div>
+			  <a class="btn btn-dark btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">Add</a>
+			</div>
+		 
+		  <br>
+		  
+		
+	
+	
+	
+	
+	
+	
+	<!-- Students -->
+	
+	
+	
 	
 	<div class="col-md-4 offset-md-1 text-center mt-2">
 	<br>
 		<h2>Students</h2>
 		<ul class="list-group mt-3">
   			  <%
-  			String classs=request.getParameter("classs");
-		Session s1= FactoryProvider.getFactory().openSession();
-		Query q1= s1.createQuery("from ClassStudents where class_=:x");
-		q1.setParameter("x",classs);
-		List<ClassStudents> list1=q1.list();
-		for(ClassStudents cs:list1){
+  			String classss=request.getParameter("classs");
+		Session s2= FactoryProvider.getFactory().openSession();
+		Query q2= s2.createQuery("from ClassStudents where class_=:x");
+		q2.setParameter("x",classss);
+		List<ClassStudents> list2=q2.list();
+		for(ClassStudents cs:list2){
 			%>
 			<li class="list-group-item"><%= cs.getStudent() %>
 			<div class="container">
-			<a class="btn btn-outline-danger btn-sm mt-1" href="deleteStudentServlet?ClassId=<%=cs.getClassId()%>"> delete</a>
+			<a class="btn btn-outline-danger btn-sm mt-1" href="deleteStudentServlet?ClassId=<%=cs.getClassId()%>&classs=<%=cs.getClass_()%>"> delete</a>
 			</div> 
 			</li>
 			<%
 		}
-		s1.close();
+		s2.close();
 		%>
 			<!-- Modal -->
 			<div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">

@@ -17,6 +17,8 @@
 	<mapping class="com.entities.Subjects"/> 
 	<mapping class="com.entities.Teachers"/> 
 	<mapping class="com.entities.ClassStudents"/> 
+	<mapping class="com.entities.ClassSubjectAndTeacher"/> 
+	
 
 	
 	

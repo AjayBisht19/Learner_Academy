@@ -10,15 +10,15 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 import com.entities.ClassStudents;
-import com.entities.Subjects;
+import com.entities.ClassSubjectAndTeacher;
 import com.helper.FactoryProvider;
 
 
-public class deleteStudentServlet extends HttpServlet {
+public class deleteSubjectAndTeacherServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    
-    public deleteStudentServlet() {
+   
+    public deleteSubjectAndTeacherServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -28,12 +28,12 @@ public class deleteStudentServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		try {
 			String classs=request.getParameter("classs");
-			int stuId=Integer.parseInt(request.getParameter("ClassId").trim());
+			int cstId=Integer.parseInt(request.getParameter("ClassId").trim());
 			Session s= FactoryProvider.getFactory().openSession();
 			Transaction t= s.beginTransaction();
-			ClassStudents stu=(ClassStudents)s.get(ClassStudents.class, stuId);
+			ClassSubjectAndTeacher cstObj=(ClassSubjectAndTeacher)s.get(ClassSubjectAndTeacher.class, cstId);
 			
-			s.delete(stu);
+			s.delete(cstObj);
 			t.commit();
 			s.close();
 			 response.sendRedirect("adminManage.jsp?classs="+classs+"");
@@ -41,7 +41,8 @@ public class deleteStudentServlet extends HttpServlet {
 			// TODO: handle exception
 			e.printStackTrace();
 		}
-	
 	}
+
+	
 
 }
