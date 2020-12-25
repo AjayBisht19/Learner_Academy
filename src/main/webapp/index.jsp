@@ -20,18 +20,18 @@
 <div class="container mt-4 text-center">
 <h2 class="text-center">Classes</h2><br>
 <ul class="list-group">
-		<li class="list-group-item"><a href="user.jsp?classs=ClassI">Class I</a></li>
-		<li class="list-group-item"><a href="user.jsp?classs=ClassII">Class II</a></li>
-		<li class="list-group-item"><a href="user.jsp?classs=ClassIII">Class III</a></li>
-		<li class="list-group-item"><a href="user.jsp?classs=ClassIV">Class IV</a></li>
-		<li class="list-group-item"><a href="user.jsp?classs=ClassV">Class V</a></li>
-		<li class="list-group-item"><a href="user.jsp?classs=ClassVI">Class VI</a></li>
-		<li class="list-group-item"><a href="user.jsp?classs=ClassVII">Class VII</a></li>
-		<li class="list-group-item"><a href="user.jsp?classs=ClassVIII">Class VIII</a></li>
-		<li class="list-group-item"><a href="user.jsp?classs=ClassIX">Class IX</a></li>
-		<li class="list-group-item"><a href="user.jsp?classs=ClassX">Class X</a></li>
-		<li class="list-group-item"><a href="user.jsp?classs=ClassXI">Class XI</a></li>
-		<li class="list-group-item"><a href="user.jsp?classs=ClassXII">Class XII</a></li>
+		<li class="list-group-item"><a href="user.jsp?classs=Class I">Class I</a></li>
+		<li class="list-group-item"><a href="user.jsp?classs=Class II">Class II</a></li>
+		<li class="list-group-item"><a href="user.jsp?classs=Class III">Class III</a></li>
+		<li class="list-group-item"><a href="user.jsp?classs=Class IV">Class IV</a></li>
+		<li class="list-group-item"><a href="user.jsp?classs=Class V">Class V</a></li>
+		<li class="list-group-item"><a href="user.jsp?classs=Class VI">Class VI</a></li>
+		<li class="list-group-item"><a href="user.jsp?classs=Class VII">Class VII</a></li>
+		<li class="list-group-item"><a href="user.jsp?classs=Class VIII">Class VIII</a></li>
+		<li class="list-group-item"><a href="user.jsp?classs=Class IX">Class IX</a></li>
+		<li class="list-group-item"><a href="user.jsp?classs=Class X">Class X</a></li>
+		<li class="list-group-item"><a href="user.jsp?classs=Class XI">Class XI</a></li>
+		<li class="list-group-item"><a href="user.jsp?classs=Class XII">Class XII</a></li>
 </ul>
 </div>
    

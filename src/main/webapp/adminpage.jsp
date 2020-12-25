@@ -146,18 +146,18 @@
 		<h2 >All Classes</h2><br>
 		<ul class="list-group">
 			
-		<li class="list-group-item"><a href="adminManage.jsp?classs=ClassI">Class I</a></li>
-		<li class="list-group-item"><a href="adminManage.jsp?classs=ClassII">Class II</a></li>
-		<li class="list-group-item"><a href="adminManage.jsp?classs=ClassIII">Class III</a></li>
-		<li class="list-group-item"><a href="adminManage.jsp?classs=ClassIV">Class IV</a></li>
-		<li class="list-group-item"><a href="adminManage.jsp?classs=ClassV">Class V</a></li>
-		<li class="list-group-item"><a href="adminManage.jsp?classs=ClassVI">Class VI</a></li>
-		<li class="list-group-item"><a href="adminManage.jsp?classs=ClassVII">Class VII</a></li>
-		<li class="list-group-item"><a href="adminManage.jsp?classs=ClassVIII">Class VIII</a></li>
-		<li class="list-group-item"><a href="adminManage.jsp?classs=ClassIX">Class IX</a></li>
-		<li class="list-group-item"><a href="adminManage.jsp?classs=ClassX">Class X</a></li>
-		<li class="list-group-item"><a href="adminManage.jsp?classs=ClassXI">Class XI</a></li>
-		<li class="list-group-item"><a href="adminManage.jsp?classs=ClassXII">Class XII</a></li>
+		<li class="list-group-item"><a href="adminManage.jsp?classs=Class I">Class I</a></li>
+		<li class="list-group-item"><a href="adminManage.jsp?classs=Class II">Class II</a></li>
+		<li class="list-group-item"><a href="adminManage.jsp?classs=Class III">Class III</a></li>
+		<li class="list-group-item"><a href="adminManage.jsp?classs=Class IV">Class IV</a></li>
+		<li class="list-group-item"><a href="adminManage.jsp?classs=Class V">Class V</a></li>
+		<li class="list-group-item"><a href="adminManage.jsp?classs=Class VI">Class VI</a></li>
+		<li class="list-group-item"><a href="adminManage.jsp?classs=Class VII">Class VII</a></li>
+		<li class="list-group-item"><a href="adminManage.jsp?classs=Class VIII">Class VIII</a></li>
+		<li class="list-group-item"><a href="adminManage.jsp?classs=Class IX">Class IX</a></li>
+		<li class="list-group-item"><a href="adminManage.jsp?classs=Class X">Class X</a></li>
+		<li class="list-group-item"><a href="adminManage.jsp?classs=Class XI">Class XI</a></li>
+		<li class="list-group-item"><a href="adminManage.jsp?classs=Class XII">Class XII</a></li>
 		 
 		 
 		</ul><br>

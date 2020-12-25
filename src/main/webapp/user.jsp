@@ -1,3 +1,4 @@
+<%@page import="com.entities.ClassSubjectAndTeacher"%>
 <%@page import="com.entities.ClassStudents"%>
 <%@page import="java.util.List"%>
 <%@page import="org.hibernate.Query"%>
@@ -17,6 +18,11 @@
 <body>
 
 <%@include  file="navbar.jsp" %>
+<% String classsName=request.getParameter("classs");%>
+<div class="container text-center text-primary">
+<br>
+	<h1><%=classsName %></h1>
+</div>
 <div class="container">
 <div class="row"> 
 	<div class="col-md-6 text-center">
@@ -31,14 +37,22 @@
 		    </tr>
 		  </thead>
 		  <tbody>
-		    <tr>
-		      <td>Maths</td>
-		      <td>Mr. Vinod</td>
-		    </tr>
-		    <tr>
-		     <td>Science</td>
-		      <td>Mr. Satyam</td>
-		    </tr>
+		    <%
+  			String clas=request.getParameter("classs");
+			Session s3= FactoryProvider.getFactory().openSession();
+			Query q3= s3.createQuery("from ClassSubjectAndTeacher where class_=:x");
+			q3.setParameter("x",clas);
+			List<ClassSubjectAndTeacher> list3=q3.list();
+			for(ClassSubjectAndTeacher cst:list3){
+				%><tr>
+			    <td><%=cst.getSubject() %></td>
+			      <td><%=cst.getTeacher() %></td>
+			     
+				 </tr>
+				<%
+			}
+			s3.close();
+			%>
 		    
 		  </tbody>
 		</table>	

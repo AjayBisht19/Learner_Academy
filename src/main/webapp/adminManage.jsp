@@ -20,6 +20,11 @@
 <body>
 
 <%@include  file="adminNavbar.jsp" %>
+<% String classsName=request.getParameter("classs");%>
+<br>
+<div class="container text-center text-primary">
+	<h1><%=classsName %></h1>
+</div>
 <div class="container">
 <div class="row"> 
 	<div class="col-md-6 text-center">
