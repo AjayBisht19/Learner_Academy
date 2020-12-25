@@ -36,9 +36,9 @@
 </div>
 <div class="container">
 <div class="row"> 
-	<div class="col-md-6 text-center">
+	<div class="col-md-5 text-center">
 	<br>
-		<h2>Subjects and their teachers</h2>
+		<h3>Subjects and their teachers</h3>
 		 <table class="table mt-3">
 		  <thead>
 		    <tr>
@@ -145,9 +145,9 @@
 	
 	
 	
-	<div class="col-md-4 offset-md-1 text-center mt-2">
+	<div class="col-md-4 offset-md-2 text-center mt-2">
 	<br>
-		<h2>Students</h2>
+		<h3>Students</h3>
 		<ul class="list-group mt-3">
   			  <%
   			String classss=request.getParameter("classs");

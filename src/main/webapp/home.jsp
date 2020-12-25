@@ -12,34 +12,30 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <style >
+    .back{
+    	height:500px;
+		clip-path: polygon(0 0, 100% 0, 100% 66%, 50% 100%, 0 68%);    
+    }
+    </style>
     <title>Learner's Academy</title>
   </head>
   <body>
     <%@include  file="navbar.jsp" %>
-  
+      <%
+    HttpSession s= request.getSession();
+    if(session.getAttribute("admin")!=("admin"))
+    s.setAttribute("admin", null);
+    %>
+    <div class="p-5 back bg-primary text-white">
+    <h3 class=" display-3">Welcome to Learner's Academy</h3>
+    <br>
     
-
-<div class="container mt-4 text-center">
-<h2 class="text-center">Classes</h2><br>
-<ul class="list-group">
-		<li class="list-group-item"><a href="user.jsp?classs=Class I">Class I</a></li>
-		<li class="list-group-item"><a href="user.jsp?classs=Class II">Class II</a></li>
-		<li class="list-group-item"><a href="user.jsp?classs=Class III">Class III</a></li>
-		<li class="list-group-item"><a href="user.jsp?classs=Class IV">Class IV</a></li>
-		<li class="list-group-item"><a href="user.jsp?classs=Class V">Class V</a></li>
-		<li class="list-group-item"><a href="user.jsp?classs=Class VI">Class VI</a></li>
-		<li class="list-group-item"><a href="user.jsp?classs=Class VII">Class VII</a></li>
-		<li class="list-group-item"><a href="user.jsp?classs=Class VIII">Class VIII</a></li>
-		<li class="list-group-item"><a href="user.jsp?classs=Class IX">Class IX</a></li>
-		<li class="list-group-item"><a href="user.jsp?classs=Class X">Class X</a></li>
-		<li class="list-group-item"><a href="user.jsp?classs=Class XI">Class XI</a></li>
-		<li class="list-group-item"><a href="user.jsp?classs=Class XII">Class XII</a></li>
-</ul><br>
-<div class="text-start">
-* Click on the class to see the report of that class.
-</div>
-</div>
-   
+    <div class="ps-3">
+    	<h6 >Learner's School an online school for the students of class I-XII .</h6><br>
+    	<a class=" btn btn-outline-light btn-sm" href="index.jsp">Class Report</a>
+    </div>
+    </div> 
    
    
    
