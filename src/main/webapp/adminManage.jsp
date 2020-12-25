@@ -20,6 +20,15 @@
 <body>
 
 <%@include  file="adminNavbar.jsp" %>
+
+ <%
+    if(session.getAttribute("admin")==null){
+    	
+    	response.sendRedirect("login.jsp");
+    }
+	System.out.println(session.getAttribute("admin"));
+    %>
+
 <% String classsName=request.getParameter("classs");%>
 <br>
 <div class="container text-center text-primary">

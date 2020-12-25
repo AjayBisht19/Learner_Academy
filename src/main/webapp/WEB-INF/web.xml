@@ -58,6 +58,18 @@
 		<description></description>
 		<servlet-class>com.servlets.deleteSubjectAndTeacherServlet</servlet-class>
 	</servlet>
+	<servlet>
+		<servlet-name>loginServlet</servlet-name>
+		<display-name>loginServlet</display-name>
+		<description></description>
+		<servlet-class>com.servlets.loginServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>logOutServlet</servlet-name>
+		<display-name>logOutServlet</display-name>
+		<description></description>
+		<servlet-class>com.servlets.logOutServlet</servlet-class>
+	</servlet>
   <servlet-mapping>
   	<servlet-name>addSubjectServlet</servlet-name>
   	<url-pattern>/addSubjectServlet</url-pattern>
@@ -93,5 +105,13 @@
   <servlet-mapping>
   	<servlet-name>deleteSubjectAndTeacherServlet</servlet-name>
   	<url-pattern>/deleteSubjectAndTeacherServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>loginServlet</servlet-name>
+  	<url-pattern>/loginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>logOutServlet</servlet-name>
+  	<url-pattern>/logOutServlet</url-pattern>
   </servlet-mapping>
 </web-app>

@@ -1,3 +1,4 @@
+<%@page import="org.hibernate.internal.build.AllowSysOut"%>
 <%@page import="java.util.List"%>
 <%@page import="org.hibernate.Query"%>
 <%@page import="com.helper.FactoryProvider"%>
@@ -21,6 +22,13 @@
   </head>
   <body>
     <%@include  file="adminNavbar.jsp" %>
+    <%
+    if(session.getAttribute("admin")==null){
+    	
+    	response.sendRedirect("login.jsp");
+    }
+
+    %>
 
 		<div class="container mt-4 text-center">
 		<div class="row">

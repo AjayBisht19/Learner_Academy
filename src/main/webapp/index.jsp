@@ -16,6 +16,12 @@
   </head>
   <body>
     <%@include  file="navbar.jsp" %>
+    <%
+    HttpSession s= request.getSession();
+    if(session.getAttribute("admin")!=("admin"))
+    s.setAttribute("admin", null);
+    %>
+    
 
 <div class="container mt-4 text-center">
 <h2 class="text-center">Classes</h2><br>
