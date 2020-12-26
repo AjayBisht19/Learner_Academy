@@ -4,6 +4,7 @@ Clone git: git clone.
    
 Open the cloned file using Eclipse IDE.
 Connect it to your database using mysql workbench.
+Add a database named academy.
 
 Do admin login by using :
 
